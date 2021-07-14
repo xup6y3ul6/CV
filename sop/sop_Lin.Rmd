@@ -1,0 +1,46 @@
+---
+name: "Tzu-Yao Lin"
+position: "Master in Psychology, National Taiwan University"
+address: "3F., No. 213-1, Wuling St., Anle Dist., Keelung City 204007, Taiwan (R.O.C.)"
+phone: "+886 989 878 512"
+email: "r08227112@ntu.edu.tw"
+github: "xup6y3ul6"
+www: "Cognitive Psychometrics Lab" 
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "F47F24" # 003C7D
+fontsize: 18pt
+documentclass: awesome-sop
+output: 
+  vitae::awesomecv:
+    keep_tex: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+\renewcommand{\baselinestretch}{1.5}
+
+# Statement of Research Interests, Preparation, and Goals
+
+
+
+## Research Interests
+
+\begingroup\fontsize{12pt}{2em}\bodyfontlight\upshape\color{text}
+
+I am intensely interested in the mathematical modeling of perception and decision-making processes. I study the cultural consensus theory (CCT) and Bayesian statistics recently. The CCT, developed by Batchelder and colleagues in the mid‑1980s, is a cognitively driven methodology to assess informants’ consensus. In my research, I incorporate a response-confidence embedded the (low-) threshold theory into the CCT framework for assessing the consensus answers to items, item difficulty, and informant knowledge. Using the hierarchical Bayesian structure, the new model could account for the between- and within-cultural groups heterogeneities. In addition, I also studied decision-making in behavioral economics, analysis of neuroimaging data, and the psychophysical model of time perception. Professor Yung‑Fong Hsu’s lab in which I participate usually discusses choice behavior, mathematical psychology, and Fechnarian psychophysics. I am always intrigued by those topics and willing to acquire new techniques.
+\endgroup
+
+## Preparation
+
+\begingroup\fontsize{14pt}{1em}\bodyfontlight\upshape\color{text}
+I have been an active learner and outstanding in all coursework I undertook. I took not only the quantitative psychology courses but also advanced statistics courses at Department of Mathematics, such as advanced statistical inference (I)/(II), regression analysis, multivariate statistical analysis, and applied Bayesian statistical analysis. I am also proficient in programming, like R and python, and have four years of experience on research projects. Those experiences equip me with sufficient quantitative ability and teamwork spirit to attend this 2021 summer school. Before attending this summer school, I will have finished reading selected references and other materials about order-constrained data analytics.
+\endgroup
+
+## Goals
+
+Learning more skills to clearly model human behavior and mental process, especially in decision-making, is my primary aim in this training program. I thought that there are some alternative approaches for modeling the binary choice: (1) accounting for the decision maker’s response bias with additional covariates; (2) extending the model to deal with individual preference and group consensus preference, like the CCT approach. Or maybe we can develop an R package for QTEST in the feature.
+
