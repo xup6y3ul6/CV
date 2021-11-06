@@ -1,0 +1,278 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{0064A4}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Tzu-Yao Lin}{}
+
+\position{Master in Psychology, National Taiwan University}
+\address{3F., No.~213-1, Wuling St., Anle Dist., Keelung City 204007,
+Taiwan (R.O.C.)}
+
+\mobile{+886 989 878 512}
+\email{\href{mailto:r08227112@ntu.edu.tw}{\nolinkurl{r08227112@ntu.edu.tw}}}
+\homepage{Cognitive Psychometrics Lab}
+\github{xup6y3ul6}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{I'm a committed, communicative, and team-oriented psychology
+graduate student who has a strong interest in Bayesian statistics and
+mathematical modeling of decision-making processes. I'm good at data
+analysis and programming. I'm always eager for new knowledge and willing
+to share what I have learned.}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {November 2021}
+    {Tzu-Yao Lin~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{current-research}{%
+\section{Current Research}\label{current-research}}
+
+\hypertarget{section}{%
+\subsection{\texorpdfstring{\begingroup\fontsize{10pt}{1em}\bodyfont\upshape\bfseries\textcolor{text} Incorporating the threshold theory into the cultural consensus theory for ordinal categorical data: A simulation study\endgroup}{}}\label{section}}
+
+\begingroup\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}
+
+\textbf{Advisor}: Prof.~Yung-Fong Hsu
+
+Cultural consensus theory (CCT), developed by Batchelder and colleagues
+in the mid‐1980s, is a cognitively driven methodology to assess
+informants' consensus in which the culturally correct answers are
+unknown to researchers in prior. The primary goal of CCT is to uncover
+the cultural knowledge, preference, or beliefs shared by members of a
+group. One of the CCT models, called the General Condorcet Model (GCM),
+deals with binary (e.g., true/false) response data which were collected
+from a group of informants who share the same cultural knowledge. I
+incorporated the GCM with the Luce‐Krantz threshold theory to account
+for ordinal categorical data (including Likert‐type questionnaires) in
+which informants can express different confidence levels when answering
+the items/questions. I applied the hierarchical Bayesian modeling
+approach and the Markov chain Monte Carlo sampling method to simulated
+data to evaluate the recovery of the parameters in the model. \endgroup
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Master in Psychology [Overall GPA: 4.02/4.30]}{National Taiwan University (NTU)}{Taiwan (R.O.C.)}{September 2019--Present}{}\vspace{-4.0mm}
+    \cventry{Bachelor in Psychology (major) and in Forestry and Resources Conservation (minor) [Overall GPA: 4.12/4.30]}{National Taiwan University}{Taiwan (R.O.C.)}{September 2014--June 2019}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{awards}{%
+\section{Awards}\label{awards}}
+
+\begin{cventries}
+    \cventry{The 8th Annual Academic Conference on Psychology in NTU}{The 3rd Outstanding Poster Award}{}{November 2020}{}\vspace{-4.0mm}
+    \cventry{Department of Psychology, National Taiwan University}{Professor Fa-Yu Cheng Memorial Scholarship}{}{2019}{\begin{cvitems}
+\item The first prize of undergraduate psychology students for outstanding academic performance at the academic year 2018-2019
+\end{cvitems}}
+    \cventry{College of Science, National Taiwan University}{Dean's Award}{}{2019}{\begin{cvitems}
+\item The top 10\% of the class graduating for outstanding scholastic achievement at the academic year 2018-2019
+\end{cvitems}}
+    \cventry{Department of Psychology, National Taiwan University}{Academic Excellent Award}{}{Spring 2017}{\begin{cvitems}
+\item Awarded to students ranking top 5\% in the department in the semester
+\end{cvitems}}
+    \cventry{Department of Forest and Resources Conservation, National Taiwan University}{Academic Excellent Award}{}{Spring 2015}{\begin{cvitems}
+\item Awarded to students ranking top 5\% in the department in the semester
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{graduate-level-statistics-or-modeling-courses}{%
+\section{Graduate Level Statistics or Modeling
+Courses}\label{graduate-level-statistics-or-modeling-courses}}
+
+\begin{cvhonors}
+    \cvhonor{}{MATH7610: \textbf{Multivariate Statistical Analysis}}{A+}{Spring 2021}
+    \cvhonor{}{Psy7277: \textbf{Neural and Behavioral Modeling}}{A+}{Fall 2020}
+    \cvhonor{}{MATH7606: \textbf{Regression Analysis}}{A}{Fall 2020}
+    \cvhonor{}{MATH7604: \textbf{Advanced Statistical Inference II}}{A-}{Spring 2020}
+    \cvhonor{}{MATH7603: \textbf{Advanced Statistical Inference I}}{B-}{Fall 2019}
+    \cvhonor{}{PSY7001: \textbf{Experimental Design}}{A+}{Fall 2019}
+    \cvhonor{}{CSIE2120: \textbf{Linear Algebra}}{A+}{Fall 2019}
+    \cvhonor{}{PSY5033: \textbf{Applied Linear Regression}}{A+}{Spring 2019}
+    \cvhonor{}{EPM5074: \textbf{Applied Bayesian Statistical Analysis}}{A}{Fall 2018}
+\end{cvhonors}
+
+\hypertarget{research-experience}{%
+\section{Research Experience}\label{research-experience}}
+
+\begin{cventries}
+    \cventry{Research Assistant}{Neural Correlates of Emotion as an Arbitrator to Reconcile the Conflicts within Dual-Process in the Context of Decision Making under Risk}{Prof. Yung-Fong Hsu}{March 2021--Present}{\begin{cvitems}
+\item We studied how the mechanism of people's dual-processing (heuristic and analytical) conflict when making a risky decision. The purpose of this study is to explore the role of emotion in the conflict of dual-processing decision-making. I helped design the experiment of creating a 'Mixed Prospect Binary Lottery' to simulate a risky scenario and estimate every subject's utility functions. Besides the behavioral experiments, we will conduct state-of-the-art neuroimaging, PET-fMRI and MRS-fMRI, in the future and examine the effects of neurotransmitter and BOLD signals under a risky situation.
+\end{cvitems}}
+    \cventry{Research Assistant}{The cultural consensus theory extends with the threshold theory: A study of ordinal categorical data analysis}{Prof. Yung-Fong Hsu}{August 2019--July 2020}{\begin{cvitems}
+\item We incorporated the Luce‑Krantz threshold theory into cultural consensus theory to deal with ordinal categorical data. I axiomatized our new model and used Markov chain Monte Carlo sampling for Bayesian inference.
+\end{cvitems}}
+    \cventry{Research Assistant}{From mind reading to mind sharing: A study on neural correlates of cognitive and affective ``Theory of Mind'' and their applications to salesforce enhancement}{Prof. Heng-Chiang Huang}{January 2018--Present}{\begin{cvitems}
+\item Under the supervision of Ph.D. candidate Jonathan Tong, we tried to measure the subject’s ability of cognitive and affective theory of mind. According to our experiment paradigm, we also probed into the topographic representation of numerosity on the brain.
+\end{cvitems}}
+    \cventry{Research Assistant}{Coalition without trust: The intra-brain connectivity and inter-brain synchronization of herd behaviors in an economic bubble game}{Prof. Yu-Ping Chen}{January 2018--Present}{\begin{cvitems}
+\item Under the supervision of Ph.D. candidate Jonathan Tong, I attended data collection and analyzed behavior and fMRI data. The breakthrough in this project was that we connected two MRIs and collected both subject's BOLD signals simultaneously.
+\end{cvitems}}
+    \cventry{Learning Assistant}{Research of positive and negative memorable tourism experience}{Prof. Chia-Pin Yu}{September 2016--January 2017}{\begin{cvitems}
+\item Assisted in data collection and qualitative interviews about the memorable tourism experience.
+\end{cvitems}}
+    \cventry{Research Assistant}{Characteristics of the evapotranspiration of a Japanese cedar forest in Xitou in Taiwan}{Researcher Sophie Laplace}{February 2015--January 2016}{\begin{cvitems}
+\item Assisted in collecting the evapotranspiration data of tree sap flow in the Xitou experimental forest.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{presentations}{%
+\section{Presentations}\label{presentations}}
+
+\begin{cventries}
+    \cventry{Incorporating threshold theory into the cultural consensus theory for ordinal categorical data: A simulation study}{The 8th Annual Academic Conference on Psychology in NTU}{}{2020}{\begin{cvitems}
+\item Received the 3rd Outstanding Poster Award
+\item Poster: https://xup6y3ul6.github.io/GCLKmodel\_poster/poster.pdf
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{teaching-assistant}{%
+\section{Teaching Assistant}\label{teaching-assistant}}
+
+\begin{cvhonors}
+    \cvhonor{}{PSY7001: \textbf{Experimental Design}}{}{Fall 2021}
+    \cvhonor{}{PSY7001: \textbf{Experimental Design}}{}{Fall 2020}
+    \cvhonor{}{PSY1004: \textbf{Statistics in Psychology and Education II}}{4.33/5.00}{Spring 2020}
+    \cvhonor{}{PSY1003: \textbf{Statistics in Psychology and Education I}}{4.40/5.00}{Fall 2019}
+\end{cvhonors}
+
+\hypertarget{training}{%
+\section{Training}\label{training}}
+
+\begin{cventries}
+    \cventry{Statistics Education Center, National Taiwan University}{Statistical Teaching Assistant Training Course}{Taiwan (R.O.C.)}{2020}{}\vspace{-4.0mm}
+    \cventry{Imaging Center for Integrated Body, Mind and Culture Research, College of Science, National Taiwan University}{Functional Magnetic Resonance Imaging Training Course I}{Taiwan (R.O.C.)}{January 2019}{}\vspace{-4.0mm}
+    \cventry{Imaging Center for Integrated Body, Mind and Culture Research, College of Science, National Taiwan University}{Magnetoencephalography Training Course I}{Taiwan (R.O.C.)}{January 2019}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{skills}{%
+\section{Skills}\label{skills}}
+
+\begin{cventries}
+    \cventry{Statistical modeling, Computational modeling, Bayesian statistics, Neuroimage analysis (fMRI and MEG)}{Analytical}{}{}{}\vspace{-4.0mm}
+    \cventry{R (Tidyverse, R Markdown, and Shiny), JAGS, Stan, Python (PyTorch), MATLAB (SPM12 and Brainstorm)}{Programming}{}{}{}\vspace{-4.0mm}
+    \cventry{Git, GitHub, \LaTeX}{Tools}{}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{extracurricular-activities}{%
+\section{Extracurricular Activities}\label{extracurricular-activities}}
+
+\begin{cventries}
+    \cventry{Leader and Choreographer}{The 9th Taiwan National Fire Dance Competition \emoji{fire}}{}{2017}{\begin{cvitems}
+\item Group champion \emoji{1st-place-medal}
+\end{cvitems}}
+    \cventry{Vice President}{National Taiwan University Fire Dance Club}{}{2016-2017}{}\vspace{-4.0mm}
+    \cventry{Coordinator and Choreographer}{The 11th Presentation of National Taiwan University Fire Dance Club}{}{2016}{}\vspace{-4.0mm}
+    \cventry{Vice Coordinator and Choreographer}{The 10th Presentation of National Taiwan University Fire Dance Club}{}{2016}{}\vspace{-4.0mm}
+    \cventry{Lecturer and Team Leader}{Forest Summer Camp}{}{2015, 2016}{}\vspace{-4.0mm}
+    \cventry{Vice Coordinator}{Forest Orientation Camp}{}{2015}{}\vspace{-4.0mm}
+    \cventry{Member of the Election and Recalling Execution Commission}{National Taiwan University Student Association}{}{2014-2015}{}\vspace{-4.0mm}
+\end{cventries}
+
+\end{document}

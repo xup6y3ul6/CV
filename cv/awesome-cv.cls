@@ -90,6 +90,10 @@
   pdfkeywords={}
 }
 
+% Need for emoji. See: https://texdoc.org/serve/emoji/0
+\RequirePackage{emoji}
+\setemojifont{TwemojiMozilla}
+
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -610,7 +614,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2.0cm} L{\textwidth - 4.5cm} R{2.5cm}}
 }{%
     \end{tabular*}
   \end{center}

@@ -1,13 +1,13 @@
 category, skill
-Analytical, Statistical modelling
-Analytical, Computational modelling
+Analytical, Statistical modeling
+Analytical, Computational modeling
 Analytical, Bayesian statistics
-Analytical, Nueroimage analysis
-Programming, "R (tidyverse, rmarkdown, shiny)"
+Analytical, "Neuroimage analysis (fMRI and MEG)"
+Programming, "R (Tidyverse, R Markdown, and Shiny)"
 Programming, JAGS
 Programming, Stan
-Programming, "Python (pytorch)"
-Programming, "Matlab (SPM, Brainstorm)"
+Programming, "Python (PyTorch)"
+Programming, "MATLAB (SPM12 and Brainstorm)"
 Tools, Git
 Tools, GitHub
-English, Reaching the High-Intermediate Level in the General English Proficiency Test
+Tools, \LaTeX
