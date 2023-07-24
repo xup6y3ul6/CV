@@ -1,0 +1,278 @@
+---
+name: "Tzu-Yao Lin"
+#position: "Joint Ph.D. student in Dept. Methodology & Statistics, Maastricht University, and in , KU Leuven"
+#address: ""
+#phone: ""
+email: "tzu-yao.lin@maastrichtuniversity.nl"
+github: "xup6y3ul6"
+#www: "Cognitive Psychometrics Lab" # change to lab name /faHeart icon
+aboutme: "I’m a committed, communicative, and team-oriented psychology graduate student who has a strong interest in Bayesian statistics and computational modeling of decision-making processes. I’m good at data analysis and programming. I’m always eager for new knowledge and willing to share what I have learned."
+date: "`r format(Sys.time(), '%B %Y')`"
+params:
+    schoolcolor: "00295C"
+headcolor: "`r params$schoolcolor`"
+output: 
+  vitae::awesomecv:
+    keep_tex: FALSE
+    latex_engine: lualatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+source("scripts/install.R")
+```
+
+```{r get data, include=FALSE}
+# 
+# local_edition(1) # readr 改版過了，會使得我讀引號內逗點怪固的
+# # 如： aa, "aa, bb", bb 因此改為先前 readr 的版本。
+# # 參考自：https://github.com/tidyverse/readr/issues/1350
+# 
+# ## Education
+# education <- read_csv(here::here("data", "education.csv"))
+# 
+# ## Awards
+# awards <- read_csv(here::here("data", "awards.csv"))
+# 
+# ## Courses
+# courses <- read_csv(here::here("data", "courses.csv"))
+# 
+# ## Research Experience
+# research <- read_csv(here::here("data", "research_experience.csv"))
+# 
+# ## Conference publication
+# conference <- read_csv(here::here("data", "conference_publication.csv"))
+# 
+# ## Training
+# train <- read_csv(here::here("data", "training.csv"))
+# 
+# ## Teaching assistant
+# ta <- read_csv(here::here("data", "teaching.csv")) 
+# 
+# ## Presentations
+# # presentations <- read_csv(here::here("data", "presentations.csv")) %>% 
+# #   arrange(desc(when))
+# 
+# ## Skills
+# skills <- read_csv(here::here("data", "skills.csv")) %>% 
+#   group_by(category) %>% 
+#   mutate(skill = paste(skill, collapse = ", ")) %>% 
+#   ungroup %>% 
+#   unique
+# 
+# ## Extracurricular Experience
+# extracurricular <- read_csv(here::here("data", "extracurricular_experience.csv")) 
+
+```
+
+
+# Education
+
+```{r education}
+education <- tribble(
+  ~degree, ~uni, ~loc, ~start_date, ~end_date, ~details,
+  "Ph.D. student in Department of Methodology & Statistics", "Maastricht University", "Maastricht, The Netherlands", "October 2022", "Present", "",
+  "Ph.D. student in Research Group of Quantitative Psychology and Individual Differences", "KU Leuven", "Leuven, Belgium", "October 2022", "Present", "",
+  "M.S. in Psychology [Overall GPA: 4.02/4.30]", "National Taiwan University (NTU)","Taipei, Taiwan", "September 2019", "June 2022", "",
+  "B.S. in Psychology (major) and in Forestry and Resources Conservation (minor) [Overall GPA: 4.12/4.30]", "National Taiwan University","Taipei, Taiwan", "September 2014", "June 2019", "" 
+)
+
+education %>% 
+  detailed_entries(
+    when = glue("{start_date}--{end_date}"),
+    what = degree,
+    where = loc,
+    with = uni) 
+```
+
+# Awards
+
+```{r award}
+award <- tribble(
+  ~award, ~time, ~what, ~details,
+  "Dean's Award", "2022 & 2019", "College of Science, National Taiwan University", "The top three of the class graduating for outstanding Master's research at the academic year 2021-2022",
+  "Dean's Award", "2022 & 2019", "College of Science, National Taiwan University", "The top 10% of the class graduating for outstanding scholastic achievement at the academic year 2018-2019",
+  "Professor Fa-Yu Cheng Memorial Scholarship", "2019", "Department of Psychology, National Taiwan University", "The top prize of undergraduate psychology students for outstanding academic performance at the academic year 2018-2019",
+  "Academic Excellence Award", "Spring 2017", "Department of Psychology, National Taiwan University", "Awarded to students ranking top 5% in the department in the semester",
+  "", "Spring 2015", "Department of Forest and Resources Conservation, National Taiwan University", "Awarded to students ranking top 5% in the department in the semester"
+)
+
+award %>% 
+  detailed_entries(
+    when = time,
+    what = what,
+    with = award,
+    why = details)
+```
+
+# Conference Presentation
+
+```{r conference}
+conference <- tribble(
+  ~with, ~when, ~what, ~where, ~why,
+  "Lin, T.-Y. \\textnormal{\\& Hsu, Y.-F. (2020) \\textit{Incorporating threshold theory into the cultural consensus theory for ordinal categorical data: A simulation study}}", "2020", "The 8th Annual Academic Conference on Psychology at NTU", "Taipei, Taiwan", "Received the 3rd Outstanding Poster Award",
+  "Lin, T.-Y. \\textnormal{\\& Hsu, Y.-F. (2020) \\textit{Incorporating threshold theory into the cultural consensus theory for ordinal categorical data: A simulation study}}", "2020", "The 8th Annual Academic Conference on Psychology at NTU", "Taipei, Taiwan", "Poster: \\url{https://xup6y3ul6.github.io/GCLKmodel_poster/poster.pdf}"
+)
+conference %>% 
+  detailed_entries(
+    what = what,
+    #when = when,
+    with = with,
+    where = where,
+    why = why,
+    .protect = FALSE)
+```
+
+
+\newpage
+
+# Research Experience
+
+```{r research}
+research <- tribble(
+  ~role, ~topic, ~team, ~start_date, ~end_date, ~details,
+  "Research Assistant", "Neural correlates of emotion as an arbitrator to reconcile the conflicts within dual-process in the context of decision making under risk", "Prof. Yung-Fong Hsu", "March 2021", "Present", "We studied the mechanism of dual-processing (heuristic and analytical) conflicts and the role of emotion when making a risky decision. I helped design the experiment of creating a 'Mixed Prospect Binary Lottery' to elicit the subject's utility functions and estimate the level of loss aversion.",
+  "Research Assistant", "Neural correlates of emotion as an arbitrator to reconcile the conflicts within dual-process in the context of decision making under risk", "Prof. Yung-Fong Hsu", "March 2021", "Present", "We will utilize PET-fMRI and MRS-fMRI, the state-of-the-art neuroimaging techniques, to examine the effects of neurotransmitter and BOLD signals in a risky situation.",
+  "Research Assistant","The cultural consensus theory extends with the threshold theory: A study of ordinal categorical data analysis", "Prof. Yung-Fong Hsu", "August 2019", "July 2020", "We incorporated the Luce‑Krantz threshold theory into cultural consensus theory to deal with ordinal categorical data. I axiomatized our new model and used the hierarchical Bayesian framwork for the inference.",
+  "Research Assistant", "From mind reading to mind sharing: A study on neural correlates of cognitive and affective Theory of Mind and their applications to salesforce enhancement", "Prof. Heng-Chiang Huang", "January 2018", "December 2019", "We want to know if a seller has greater abilities of cognitive and affective Theory of Mind will they have a better selling performance. We designed two different games to test those abilities of Theory of Mind with fMRI and MEG.",
+  "Research Assistant","From mind reading to mind sharing: A study on neural correlates of cognitive and affective Theory of Mind and their applications to salesforce enhancement", "Prof. Heng-Chiang Huang", "January 2018", "December 2019", "I have played a critical role in this project by taking the initiative to learn Brainstorm (a MATLAB toolbox for M/EEG data analysis) and analyzing event-relative field and source estimation for our data. I also used the machine learning approach to classify the neural representation of numerosity (the set size of a group of items).",
+  "Research Assistant", "Coalition without trust: The intra-brain connectivity and inter-brain synchronization of herd behaviors in an economic bubble game", "Prof. Yu-Ping Chen", "January 2018", "Present", "We observed pairs of subjects' stock trading behaviors in a simulated economic bubble game. The breakthrough in this project was that we connected two MRI scan machines and simultaneously collected both subjects' BOLD signals.",
+  "Research Assistant", "Coalition without trust: The intra-brain connectivity and inter-brain synchronization of herd behaviors in an economic bubble game", "Prof. Yu-Ping Chen", "January 2018", "Present", "I learned the fMRI analysis, established the analytical procedure, and recorded tutoring videos for our research team.",
+  "Learning Assistant", "Research of positive and negative memorable tourism experience", "Prof. Chia-Pin Yu", "September 2016", "January 2017", "Assisted in data collection and qualitative interviews about the memorable tourism experience.", 
+  "Research Assistant", "Characteristics of the evapotranspiration of a Japanese cedar forest in Xitou in Taiwan", "Researcher Sophie Laplace", "February 2015", "January 2016", "Assisted in collecting the evapotranspiration data of tree sap flow in the Xitou experimental forest."
+)
+
+research %>%
+  detailed_entries(
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    with = topic,
+    where = team,
+    why = details,
+    .protect = TRUE)
+```
+
+
+# Teaching Assistant
+
+```{r ta}
+ta <- tribble(
+  ~title, ~code, ~semester, ~score,
+  "Experimental Design", "PSY7001", "Fall 2021", "",
+  "Experimental Design", "PSY7001", "Fall 2020", "", 
+  "Statistics in Psychology and Education II", "PSY1004", "Spring 2020", "4.33/5.00",
+  "Statistics in Psychology and Education I", "PSY1003", "Fall 2019", "4.40/5.00"
+)
+
+ta %>%
+  brief_entries(
+    what = glue::glue("<code>: \\textbf{<title>}", .open = "<", .close = ">"), 
+    when = semester,
+    with = score,
+    .protect = FALSE)
+```
+
+
+# Graduate Level Statistics or Modeling Courses
+
+```{r course}
+course <- tribble(
+ ~title, ~code, ~semester, ~score,
+  "Machine Learning", "CSIE5043", "Fall 2021", "A",
+  "Multivariate Statistical Analysis", "MATH7610", "Spring 2021", "A+",
+  "Neural and Behavioral Modeling", "PSY7277", "Fall 2020", "A+",
+  "Regression Analysis", "MATH7606", "Fall 2020", "A",
+  "Advanced Statistical Inference II", "MATH7604", "Spring 2020", "A-",
+  "Advanced Statistical Inference I", "MATH7603", "Fall 2019", "B-",
+  "Experimental Design", "PSY7001", "Fall 2019", "A+",
+  "Linear Algebra", "CSIE2120", "Fall 2019", "A+",	
+  "Applied Linear Regression", "PSY5033", "Spring 2019", "A+",
+  "Applied Bayesian Statistical Analysis", "EPM5074", "Fall 2018", "A"
+)
+
+course %>%
+  brief_entries(
+    what = glue::glue("<code>: \\textbf{<title>}", .open = "<", .close = ">"),
+    when = semester,
+    with = score,
+    .protect = FALSE)
+```
+
+\newpage
+
+# Trainings
+```{r train}
+train <- tribble(
+  ~what, ~when, ~with, ~where, ~why,
+"Statistics Education Center, National Taiwan University", "2020", "Statistical Teaching Assistant Training Course", "Taipei, Taiwan", "",
+"Imaging Center for Integrated Body, Mind and Culture Research, College of Science, National Taiwan University", "January 2019", "Functional Magnetic Resonance Imaging Training Course I", "Taipei, Taiwan", "",
+"Imaging Center for Integrated Body, Mind and Culture Research, College of Science, National Taiwan University", "January 2019", "Magnetoencephalography Training Course I", "Taipei, Taiwan", ""
+)
+
+train %>% 
+  detailed_entries(
+    what = what, 
+    when = when,
+    with = with,
+    where = where,
+    .protect = TRUE)
+```
+
+
+# Skills
+
+```{r}
+skill <- tribble(
+  ~category, ~skill,
+  "Analytical", "Statistical modeling",
+  "Analytical", "Computational modeling",
+  "Analytical", "Bayesian statistics",
+  "Analytical", "Neuroimage analysis (fMRI and MEG)", 
+  "Programming", "R (Tidyverse, R Markdown, and Shiny)",
+  "Programming", "JAGS",
+  "Programming", "Stan",
+  "Programming", "Python (PyTorch)",
+  "Programming", "MATLAB (SPM12 and Brainstorm)",
+  "Programming", "SAS",
+  "Programming", "Linux",
+  "Tools", "Git",
+  "Tools", "GitHub",
+  "Tools", "\\LaTeX"
+)
+
+skill %>% 
+  group_by(category) %>% 
+  mutate(skill = paste(skill, collapse = ", ")) %>% 
+  ungroup %>% 
+  unique %>% 
+  detailed_entries(
+    what = skill, 
+    with = category,
+    .protect = FALSE)
+```
+
+
+# Extracurricular Activities
+
+```{r extracurricular}
+extracurricular <- tribble(
+  ~with, ~when, ~what, ~where, ~why,
+  "The 9th Taiwan National Fire Dance Competition \\emoji{fire}", "2017", "Leader and Choreographer", "Taiwan (R.O.C)", "Group champion \\emoji{1st-place-medal}",
+  "National Taiwan University Fire Dance Club", "2016-2017", "Vice President", "National Taiwan University", "",
+  "The 11th Presentation of National Taiwan University Fire Dance Club", "2016", "Coordinator and Choreographer", "National Taiwan University", "",
+  "The 10th Presentation of National Taiwan University Fire Dance Club", "2016", "Vice Coordinator and Choreographer", "National Taiwan University", "",
+  "Forest Summer Camp", "2015, 2016", "Lecturer and Team Leader", "Department of Forestry and Resources Conservation", "",
+  "Forest Orientation Camp", "2015","Vice Coordinator","Department of Forestry and Resources Conservation", "",
+  "National Taiwan University Student Association", "2014-2015", "Member of the Election and Recalling Execution Commission", "National Taiwan Univerity", ""
+)
+
+extracurricular %>% 
+  detailed_entries(
+    what = what,
+    when = when,
+    with = with,
+    # why = why,
+    .protect = FALSE)
+```
